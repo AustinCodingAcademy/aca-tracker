@@ -4,6 +4,7 @@ Let's create an app that will let us see where people are.
 ## Create a server
 * Make sure its listening
 * Make sure it can serve static files
+* Make sure to use body-parser
 * create a variable `lastClientId = 0`
 * create a variable `clients = []`
 * Make a route for a POST to path /clients
