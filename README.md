@@ -8,14 +8,20 @@ Let's create an app that will let us see where people are.
 * create a variable `lastClientId = 0`
 * create a variable `clients = []`
 * Make a route for a POST to path /clients
-  * The server should expect to recieve a body as `{"name":"Bob"}`
+  * The server should expect to receive a body as `{"name":"Bob"}`
   * The server should increment lastClientId by one.
   * The server should create a new object `{name:theName, clientId:lastClientId,lat:"",long:""}` and add it to the clients array
   * The server should send back this object as json
 * Make a route for a POST to path /locations
-  * The server should expect to receive a body as `{"id":3, lat:"30.23",long:"-97.7"}`
+  * The server should expect to receive a body as `{"id":3, lat:"30.23",long:"-97.7",location:""}`
   * use this information to make a node-fetch call to http://nominatim.openstreetmap.org/reverse?format=json&lat=30.23&lon=-97&zoom=18&addressdetails=1
   * extract the address from this call
+  * find the appropriate object from the array with find
+  * update the keys `lat, long, location`
+  * send back this object as json
+* Make a route for a GET to path /locations
+  * send back the `clients` array as json
+* Test that all routes work in Postman
 
   
 ## Create web pages for the client
@@ -27,14 +33,20 @@ Let's create an app that will let us see where people are.
     * expect back data that looks like `{name:theName, clientId:lastClientId,lat:"",long:""}`
     * save the clientId in a variable
     * start a timer
-      * every 5 seconds do a fetch POST to /locations
+      * every 5 seconds 
+      * use the geo location api of the browser to get longitute and latitude coordinates
+      * do a fetch POST to /locations, send a body as `{"id":clientId, lat:"30.23",long:"-97.7"}`
 * public/admin.html
-  * make a fetch GET to /locations
+  * start a timer
+  * every 1 second make a fetch GET to /locations
+  * 
   
   
 ## Resources
 * How do you make a POST request in fetch
   * [fetch POST](https://docs.google.com/presentation/d/123k7T6_SvdaE3D9kJR-kMhi50l_IR2DgFPM5wUpnBdk/edit#slide=id.g245f370550_0_8)
+* How do you make a timer
+
   
   
  
