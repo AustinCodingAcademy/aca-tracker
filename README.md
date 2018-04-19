@@ -10,10 +10,10 @@ Let's create an app that will let us see where people are.
 * Make a route for a POST to path /clients
   * The server should expect to receive a body as `{"name":"Bob"}`
   * The server should increment lastClientId by one.
-  * The server should create a new object `{name:theName, clientId:lastClientId,lat:"",long:""}` and add it to the clients array
+  * The server should create a new object `{name:theName, clientId:lastClientId,lat:"",long:"",location:""}` and add it to the clients array
   * The server should send back this object as json
 * Make a route for a POST to path /locations
-  * The server should expect to receive a body as `{"id":3, lat:"30.23",long:"-97.7",location:""}`
+  * The server should expect to receive a body as `{"id":3, lat:"30.23",long:"-97.7"}`
   * use this information to make a node-fetch call to http://nominatim.openstreetmap.org/reverse?format=json&lat=30.23&lon=-97&zoom=18&addressdetails=1
   * extract the address from this call
   * find the appropriate object from the array with find
@@ -38,8 +38,11 @@ Let's create an app that will let us see where people are.
       * do a fetch POST to /locations, send a body as `{"id":clientId, lat:"30.23",long:"-97.7"}`
 * public/admin.html
   * start a timer
-  * every 1 second make a fetch GET to /locations
-  * 
+  * every 1 second 
+  * make a fetch GET to /locations
+  * expect back an array of objects  `[{name:theName, clientId:lastClientId,lat:"",long:"",location:""}]`
+  * loop the array
+  * append a div to the body of the page with `name` and `location` in it
   
   
 ## Resources
