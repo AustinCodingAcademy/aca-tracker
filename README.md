@@ -7,16 +7,16 @@ Let's create an app that will let us see where people are.
 * Make sure to use body-parser
 * create a variable `lastClientId = 0`
 * create a variable `clients = []`
-* Make a route for a POST to path /clients
+* Make a route for a POST to path `/clients`
   * The server should expect to receive a body as `{"name":"Bob"}`
   * The server should increment lastClientId by one.
   * The server should create a new object `{name:theName, clientId:lastClientId,lat:"",long:"",location:""}` and add it to the clients array
   * The server should send back this object as json
-* Make a route for a POST to path /locations
+* Make a route for a POST to path `/locations`
   * The server should expect to receive a body as `{"id":3, lat:"30.23",long:"-97.7"}`
   * use this information to make a node-fetch call to a [Reverse GeoLocation Server](https://repl.it/@jw56578/TerrificSnappyConditionals)
   * extract the address from this call
-  * find the appropriate object from the array with find
+  * find the appropriate object from the array by id with find
   * update the keys `lat, long, location`
   * send back this object as json
 * Make a route for a GET to path /locations
@@ -33,8 +33,8 @@ Let's create an app that will let us see where people are.
     * expect back data that looks like `{name:theName, clientId:lastClientId,lat:"",long:""}`
     * save the clientId in a variable
     * start a timer
-      * every 5 seconds 
-      * use the geo location api of the browser to get longitute and latitude coordinates
+      * every 2 seconds 
+      * use the [geo location api of the browser](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) to get longitute and latitude coordinates
       * do a fetch POST to /locations, send a body as `{"id":clientId, lat:"30.23",long:"-97.7"}`
 * public/admin.html
   * start a timer
@@ -48,7 +48,8 @@ Let's create an app that will let us see where people are.
 ## Resources
 * How do you make a POST request in fetch
   * [fetch POST](https://docs.google.com/presentation/d/123k7T6_SvdaE3D9kJR-kMhi50l_IR2DgFPM5wUpnBdk/edit#slide=id.g245f370550_0_8)
-* How do you make a timer
+* [geo location api of the browser](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition)
+* [Reverse GeoLocation Server](https://repl.it/@jw56578/TerrificSnappyConditionals)
 
   
   
