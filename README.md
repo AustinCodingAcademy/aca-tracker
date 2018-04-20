@@ -56,6 +56,6 @@ Let's create an app that will let us see where people are.
 ## Make It Real
 * Create or move your server code to [Repl Express](https://repl.it/languages/express)
 * Open index.html in a mobile web browser
-* Open admin.html in a desktip web browser
+* Open admin.html in a desktop web browser
 * Move around and watch the address change
 
