@@ -14,7 +14,7 @@ Let's create an app that will let us see where people are.
   * The server should send back this object as json
 * Make a route for a POST to path /locations
   * The server should expect to receive a body as `{"id":3, lat:"30.23",long:"-97.7"}`
-  * use this information to make a node-fetch call to http://nominatim.openstreetmap.org/reverse?format=json&lat=30.23&lon=-97&zoom=18&addressdetails=1
+  * use this information to make a node-fetch call to a [Reverse GeoLocation Server](https://repl.it/@jw56578/TerrificSnappyConditionals)
   * extract the address from this call
   * find the appropriate object from the array with find
   * update the keys `lat, long, location`
