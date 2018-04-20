@@ -46,8 +46,7 @@ Let's create an app that will let us see where people are.
   
   
 ## Resources
-* How do you make a POST request in fetch
-  * [fetch POST](https://docs.google.com/presentation/d/123k7T6_SvdaE3D9kJR-kMhi50l_IR2DgFPM5wUpnBdk/edit#slide=id.g245f370550_0_8)
+* [How do you make a POST request in fetch](https://docs.google.com/presentation/d/123k7T6_SvdaE3D9kJR-kMhi50l_IR2DgFPM5wUpnBdk/edit#slide=id.g245f370550_0_8)
 * [geo location api of the browser](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition)
 * [Reverse GeoLocation Server](https://repl.it/@jw56578/TerrificSnappyConditionals)
 
