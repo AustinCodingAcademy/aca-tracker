@@ -25,6 +25,7 @@ Let's create an app that will let us see where people are.
 
   
 ## Create web pages for the client
+* do not use setInterval
 * public/index.html
   * Nothing fancy
   * 1 textbox, `Name: <input>` , 1 button `<button>Track Me</button>`
