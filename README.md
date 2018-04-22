@@ -31,7 +31,7 @@ Let's create an app that will let us see where people are.
   * 1 textbox, `Name: <input>` , 1 button `<button>Track Me</button>`
   * onclick of the "Track Me" button 
     * do a fetch POST to /client and send the value from the text box in the body as {"name":"Bob"}
-    * expect back data that looks like `{name:theName, clientId:lastClientId,lat:"",long:""}`
+    * expect back data that looks like `{name:theName, clientId:2,lat:"",long:""}`
     * save the clientId in a variable
     * start a timer
       * every 2 seconds 
