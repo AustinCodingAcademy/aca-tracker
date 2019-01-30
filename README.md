@@ -25,9 +25,7 @@ Let's create an app that will let us see where people are.
 
   
 ## Create web pages for the client
-* do not use setInterval
 * public/index.html
-  * Nothing fancy
   * 1 textbox, `Name: <input>` , 1 button `<button>Track Me</button>`
   * onclick of the "Track Me" button 
     * do a fetch POST to /client and send the value from the text box in the body as {"name":"Bob"}
