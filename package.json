@@ -1,0 +1,24 @@
+{
+  "name": "aca-tracker",
+  "version": "1.0.0",
+  "description": "Let's create an app that will let us see where people are.",
+  "main": "Index.js",
+  "scripts": {
+    "start": "nodemon ./index.js localhost 4000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwdurst/aca-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwdurst/aca-tracker/issues"
+  },
+  "homepage": "https://github.com/bwdurst/aca-tracker#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "node-fetch": "^2.6.0"
+  }
+}
